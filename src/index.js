@@ -6,18 +6,23 @@ import reportWebVitals from './reportWebVitals';
 import MyComponent from './MyComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+// <React.StrictMode>
     {/* <App color="green" size="33" clickEvent={()=>{
       console.log("who clicked my button??")
       alert("who clicked my button??")
     }}/> */}
-    <MyComponent color="red" size="33" clickEvent={()=>{
-      console.log("who clicked my button??")
-      alert("who clicked my button??")
-    }}/>
-  </React.StrictMode>
+root.render(
+  
+    <div>
+      {/* <MyComponent color="red" size="33" clickEvent={()=>{
+        console.log("who clicked my button??")
+        alert("who clicked my button??")
+      }}/> */}
+      <App/>
+    </div>
+  
 );
+{/* </React.StrictMode> */}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
