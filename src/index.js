@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MyComponent from './MyComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App color="green" size="33" clickEvent={()=>{
+      console.log("who clicked my button??")
+      alert("who clicked my button??")
+    }}/> */}
+    <MyComponent color="red" size="33" clickEvent={()=>{
+      console.log("who clicked my button??")
+      alert("who clicked my button??")
+    }}/>
   </React.StrictMode>
 );
 
