@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyComponent from './MyComponent';
+import MyFunctionalComp from './myFunctionalComp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // <React.StrictMode>
@@ -18,7 +19,9 @@ root.render(
         console.log("who clicked my button??")
         alert("who clicked my button??")
       }}/> */}
-      <App/>
+      {/* <App/> */}
+      {/* <MyFunctionalComp/> */}
+      <MyComponent/>
     </div>
   
 );
