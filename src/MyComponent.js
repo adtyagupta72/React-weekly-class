@@ -66,9 +66,8 @@ import MyChildComponent2 from "./MyChildComponent2";
 
 var MyComponent = () => //Parent
 {
-
     const [counter, setCounter] = useState(0)
-
+    const [childCounter, setChildCounter] = useState("")
     // let myObj = {
     //     a: "A",
     //     b: "B"
@@ -198,14 +197,31 @@ var MyComponent = () => //Parent
     // console.log("strNum: ", strNum)
     // console.log("typeof strNum: ", typeof strNum)
 
+    function incrementCounter()
+    {
+        setCounter(counter+1)
+    }
+
+    function getChildData(childCounterTemp)
+    {
+        console.log("getChildData called in parent: ", childCounterTemp)
+        setChildCounter(childCounterTemp)
+    }
+
     return <div>
         <h1>Hello Parent</h1>
+        <br/>
+        <button onClick={()=>incrementCounter()}>Increment Parent Counter</button>
         <div>
-            <MyChildComponent counter={counter}/>
+            <MyChildComponent counter={counter} getChildData={getChildData}/>
         </div>
 
         <div>
-            <MyChildComponent2 counter={counter}/>
+            <MyChildComponent2 counter={counter} getChildData={getChildData}/>
+        </div>
+
+        <div>
+            <label>Child Counter: {childCounter}</label>
         </div>
     </div>
 }
