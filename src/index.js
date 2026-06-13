@@ -5,6 +5,7 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import MyComponent from './MyComponent';
 import MyFunctionalComp from './myFunctionalComp';
+import FormComponent from './FormComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // <React.StrictMode>
@@ -21,7 +22,8 @@ root.render(
       }}/> */}
       {/* <App/> */}
       {/* <MyFunctionalComp/> */}
-      <MyComponent/>
+      {/* <MyComponent/> */}
+      <FormComponent/>
     </div>
   
 );
