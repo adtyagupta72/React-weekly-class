@@ -6,6 +6,12 @@ import App from './App';
 import MyComponent from './MyComponent';
 import MyFunctionalComp from './myFunctionalComp';
 import FormComponent from './FormComponent';
+import Navigation from '../src/React-Router-Example/Navigation';
+import Home from './React-Router-Example/Home';
+import Signup from './React-Router-Example/Signup';
+import Signin from './React-Router-Example/Signin';
+import AboutUs from './React-Router-Example/AboutUs';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // <React.StrictMode>
@@ -13,18 +19,31 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       console.log("who clicked my button??")
       alert("who clicked my button??")
     }}/> */}
-root.render(
-  
-    <div>
-      {/* <MyComponent color="red" size="33" clickEvent={()=>{
+    {/* <MyComponent color="red" size="33" clickEvent={()=>{
         console.log("who clicked my button??")
         alert("who clicked my button??")
       }}/> */}
       {/* <App/> */}
       {/* <MyFunctionalComp/> */}
       {/* <MyComponent/> */}
-      <FormComponent/>
-    </div>
+root.render(
+  
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} /> 
+          <Route path="/aboutus" element={<AboutUs />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
+
+    // <div>
+      
+    //   <FormComponent/>
+    // </div>
   
 );
 {/* </React.StrictMode> */}
