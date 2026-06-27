@@ -1,9 +1,11 @@
-const ReusableButton = () =>
+const ReusableButton = (props) =>
 {
+    console.log("Message: ", props.message)
+    console.log("onButtonClick: ", props.onButtonClick)
     function clickMe()
     {
-        alert("You click the button! Bravo!")
+        alert(props.message ? props.message : "You click the button! Bravo!")
     }
-    return <button onClick={()=> clickMe()}>Click Me</button>
+    return <button onClick={()=> props.onButtonClick ? props.onButtonClick() : clickMe()}>Click Me</button>
 }
 export default ReusableButton
