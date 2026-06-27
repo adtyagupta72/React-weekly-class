@@ -12,6 +12,7 @@ import Signup from './React-Router-Example/Signup';
 import Signin from './React-Router-Example/Signin';
 import AboutUs from './React-Router-Example/AboutUs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MultiComponent from './MultiComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // <React.StrictMode>
@@ -28,17 +29,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <MyComponent/> */}
 root.render(
   
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigation />}>
-          <Route index element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/signin" element={<Signin />} /> 
-          <Route path="/aboutus" element={<AboutUs />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<Navigation />}>
+    //       <Route index element={<Home />} />
+    //       <Route path="/signup" element={<Signup />} />
+    //       <Route path="/signin" element={<Signin />} /> 
+    //       <Route path="/aboutus" element={<AboutUs />} />
+    //     </Route>
+    //   </Routes>
+    // </BrowserRouter>
+    <MultiComponent/>
 
     // <div>
       

@@ -5,14 +5,19 @@ import ReusableButton from './ReusableButton'
 const Home = () =>
 {
     const [counter, setCounter] = useState(0)
+    const [count, setCount] = useState(0)
     useEffect(() => 
     {
         setTimeout(() => 
         {
             //runs on every render
-            console.log("Timeout!")
+            console.log("Counter & Count dependancy effect!!")
         }, 1000);
-    }, []);
+    }, [counter, count]);
+
+    // useEffect(() => {
+    //     console.log("Count dependancy effect!")
+    // }, [count])
 
 
     let divStyle = {
@@ -30,6 +35,10 @@ const Home = () =>
     {
         setCounter(counter+1)
     }
+    function incrementCount()
+    {
+        setCount(count+1)
+    }
 
     return <div className='homeDiv'>
         <h1 style={{color: "#ff22aa", }}>Home</h1>
@@ -37,6 +46,9 @@ const Home = () =>
         <br/>
         Counter: {counter}
         <button onClick={()=> increment()}>++</button>
+        <br/>
+        Count: {count}
+        <button onClick={()=> incrementCount()}>++</button>
         <br/>
         <ReusableButton 
             message="You have clicked the button from Home!"
