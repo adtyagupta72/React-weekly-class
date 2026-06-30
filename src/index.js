@@ -13,6 +13,7 @@ import Signin from './React-Router-Example/Signin';
 import AboutUs from './React-Router-Example/AboutUs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MultiComponent from './MultiComponent';
+import MyClassComponent from './MyClassComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // <React.StrictMode>
@@ -39,7 +40,8 @@ root.render(
     //     </Route>
     //   </Routes>
     // </BrowserRouter>
-    <MultiComponent/>
+    // <MultiComponent/>
+    <MyClassComponent/>
 
     // <div>
       
